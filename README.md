@@ -1,60 +1,50 @@
-[![Build Status](https://travis-ci.org/pattern-lab/edition-php-drupal-standard.svg?branch=master)](https://travis-ci.org/pattern-lab/edition-php-drupal-standard)
+This PHP Drupal edition of Pattern Lab is for UCLA's brand guidelines website.
 
-# Pattern Lab Twig Standard Edition for Drupal 
+## Pattern Lab Twig Standard Edition for Drupal
 
 The Standard Edition for Drupal gives developers and designers a clean and stable base from which to develop a Drupal compatible pattern library.
 
-## Prerequistes 
+## Get Started
+You will need the following installed:
 
-- [`composer`](https://getcomposer.org)
+* [Composer](https://getcomposer.org)
 
-## First Time Install
-
-1. Run `composer create-project pattern-lab/edition-drupal-standard FOLDERNAME` (Assuming you wanted it in a directory called `FOLDERNAME`).
-1. Select a starterkit from menu. If asked about replacing files, do it.
-1. Commit new files generated.
-
-## Using It
-
-After installing and committing, others cloning the repo need to run `composer install` to install dependencies.
+Run the following to install dependencies.
+```
+$ composer install
+```
 
 ## Helpful Commands
 
 These are some helpful commands you can use on the command line for working with Pattern Lab.
 
-### One line start
+**One line start**
 
-This will compile PL and watch for changes while running the local server:
+This will generate Pattern Lab and watch for changes while running the local server:
+```
+$ php core/console --watch
+```
 
-    composer start --timeout=0
-
-### Generate Pattern Lab
+**Generate Pattern Lab**
 
 To generate the front-end for Pattern Lab type:
+```
+$ php core/console --generate
+```
 
-    php core/console --generate
-
-### Start a server to view Pattern Lab
+**Start a server to view Pattern Lab**
 
 You can use PHP's built-in web server to review your Pattern Lab project in a browser. In a separate window type:
-
-    php core/console --server
+```
+$  php core/console --server
+```
 
 Then open [http://localhost:8080](http://localhost:8080) in your browser.
 
-### Install a StarterKit
-
-To install a near-empty StarterKit as a starting point for your project type:
-
-    php core/console --starterkit --init
-
-To install a specific StarterKit from GitHub type:
-
-    php core/console --starterkit --install <starterkit-vendor/starterkit-name>
-
-### Updating Pattern Lab
-
-	composer update
+**Updating Pattern Lab**
+```
+$	composer update
+```
 
 ## Other Documentation
 
