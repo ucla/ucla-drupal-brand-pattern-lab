@@ -1,0 +1,29 @@
+{
+  "name": "ucla-brand-pattern-lab",
+  "version": "1.0.0",
+  "description": "This is the Pattern Lab build for the UCLA Brand UI Toolkit",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {
+    "css-loader": "^0.28.11",
+    "mini-css-extract-plugin": "^0.4.0",
+    "node-sass": "^4.9.0",
+    "sass-loader": "^7.0.1",
+    "style-loader": "^0.21.0",
+    "webpack": "^4.8.3",
+    "webpack-command": "^0.2.0"
+  },
+  "scripts": {
+    "start": "node_modules/.bin/webpack --config webpack.config.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://bitbucket.org/uclaucomm/ucla-brand-pattern-lab.git"
+  },
+  "author": "Ashley Luu <aluu@support.ucla.edu>",
+  "contributors": [
+    "Michael Jenner <mjenner@support.ucla.edu>"
+  ],
+  "license": "GPL-3.0",
+  "homepage": "https://bitbucket.org/uclaucomm/ucla-brand-pattern-lab#readme"
+}
