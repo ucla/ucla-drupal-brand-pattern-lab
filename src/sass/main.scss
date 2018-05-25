@@ -1,5 +1,5 @@
-/* I'm still working on getting include paths or resolve to do a lookup in the various weirdly named subfolders */
-@import './_patterns/00-atoms/01-global/_colors.scss';
+// @import './_patterns/00-atoms/01-global/_colors.scss';
+@import '_colors.scss';
 
 .wrapper {
   display:block;
