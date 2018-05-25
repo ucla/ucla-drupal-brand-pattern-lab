@@ -24,24 +24,22 @@ module.exports = {
           {
             loader: 'css-loader',
             options: {
-              modules: true,
-              importLoaders: 2,
-              localIdentName: '[local]'
+              importLoaders: 1
             }
           },
           'sass-loader'
         ]
       },
       {
-        test: /\.html$/,
-        loader: "html-loader"
+        test: /\.(png|jpg|gif|svg|eot|ttf|woff|woff2)$/,
+        loader: 'url-loader',
+        options: {
+          limit: 10000
+        }
       }
     ]
   },
   resolve: {
-    // options for resolving module requests
-    // (does not apply to resolving to loaders)
-    // well if we follow patternlab's file structure, we need this to simplify import resolution
     modules: [
       "node_modules",
       "src/sass/_patterns/00-atoms/01-global",
