@@ -1,35 +1,15 @@
 const webpack = require('webpack');
 const path = require('path');
 
-const live = process.env.NODE_ENV === 'production';
-
-const MiniCssExtractPlugin = require("mini-css-extract-plugin");
-
 module.exports = {
-  mode: live? 'production' : 'development',
   context: path.resolve(__dirname, 'src'),
   entry: "./main.js",
   output: {
     path: path.resolve(__dirname, 'public/assets'),
-    publicPath: "/public/assets",
-    filename: "main.js"
+    publicPath: "/public/assets"
   },
   module: {
     rules: [
-      {
-        test: /\.s?css$/,
-        exclude: /node_modules/,
-        use: [
-          MiniCssExtractPlugin.loader,
-          {
-            loader: 'css-loader',
-            options: {
-              importLoaders: 1
-            }
-          },
-          'sass-loader'
-        ]
-      },
       {
         test: /\.(png|jpg|gif|svg|eot|ttf|woff|woff2)$/,
         loader: 'url-loader',
@@ -66,10 +46,5 @@ module.exports = {
       "src/sass/_patterns/03-templates/00-layouts",
       "src/sass/_patterns/04-pages"
     ]
-  },
-  plugins: [
-    new MiniCssExtractPlugin({
-      filename: '[name].css'
-    })
-  ]
+  }
 }

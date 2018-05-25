@@ -36,7 +36,12 @@ $ php core/console --generate
 
 You can use PHP's built-in web server to review your Pattern Lab project in a browser. In a separate window type:
 ```
-$  php core/console --server
+$ php core/console --server
+```
+
+**Render the Twig files to HTML**
+```
+$ php core/console --export
 ```
 
 Then open [http://localhost:8080](http://localhost:8080) in your browser.
@@ -52,13 +57,28 @@ This section describes the [webpack](https://webpack.js.org/) bundling tool whic
 ### Getting Started with Webpack
 ```
 $ npm install
+```
+The above commands will install all dependencies. Then to produce output files, you would execute one of the following commands:
+
+For Development:
+```
 $ npm run build
 ```
-The above commands will first install all dependencies then produce javascript and CSS files in `/public/assets`. Source files can be found in `/src/`. A sample setup has been provided. We are going to mimic Patternlab's file structure in `/src/sass` for consistency and ease of reference. A set of module resolution directives has been added to `webpack.config.js` to make referencing sass files easier. The cost of doing things this way is that **all SASS file names must be unique**, and that **you must include the underscore '_' in the name of the file when @importing**.
 
-Webpack is configured to emit the CSS rather than do the default module bundling and renaming. The base file is `/src/sass/main.scss` and in order to include your SASS partial files in the build, you must have them imported in either this file or another file already imported into `main.scss`. The `main.scss` file is then imported into with a single line in `/src/main.js`, the entry point of the webpack build. If you wish to create multiple CSS files, you will need to create additional javascript files in `/src` and add entry points in `webpack.config.js`. Otherwise any SASS files referenced by `main.js` will be included in a single `main.css` file. If you want to rename the output file, just rename `main.js` and change the entry point in the config file.
+For Production:
+```
+$ npm run live
+```
 
-CSS minification will be added to the production build soon. To generate our CSS we are using the [MiniCssExtractPlugin](https://webpack.js.org/plugins/mini-css-extract-plugin/).
+Output files can be found in `/public/assets`. The files that contain `.min.` (for example, `main.min.js` or `main.min.css`) are the minified versions and are suitable for production deployment. The other "non-minified" files (in our example, `main.css` and `main.js`) can be used in a development environment where it may be necessary to read bundled file output.
+
+SASS Source files can be found in `/src/sass`. A sample setup has been provided. We are going to mimic Patternlab's file structure in `/src/sass` for consistency and ease of reference. A set of module resolution directives has been added to `webpack.common.js` to make referencing sass files easier. The cost of doing things this way is that **all SASS file names must be unique**, and that **you must include the underscore '_' in the name of the file when @importing**.
+
+We are currently not using any javascript in our components, but should that become necessary we can place them in the `/src/js` folder. Javascript modules (ES6 or whatever) would have to be run through [Babel](https://babeljs.io/) so a [loader](https://webpack.js.org/loaders/babel-loader/) would have to be added to the build.
+
+Webpack is configured to emit the CSS rather than do the default module bundling and class renaming. The base file is `/src/sass/main.scss` and in order to include your SASS partial files in the build, you must have them imported in either this file or another file already imported into `main.scss`. The `main.scss` file is then imported into with a single line in `/src/main.js`, the entry point of the webpack build. If you wish to create multiple CSS files, you will need to create additional javascript files in `/src` and add entry points in `webpack.common.js`. Otherwise any SASS files referenced by `/src/main.js` will be included in a single output file. If you want to rename the output file, just rename `/src/main.js` and change the entry point in the `webpack.common.js` config file.
+
+To generate our CSS we are using the [MiniCssExtractPlugin](https://webpack.js.org/plugins/mini-css-extract-plugin/). In the future we could do things like custom commands to output CSS for specific components.
 
 
 ## Other Documentation
