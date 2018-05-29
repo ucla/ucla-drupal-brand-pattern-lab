@@ -1,10 +1,12 @@
-// @import './_patterns/00-atoms/01-global/_colors.scss';
 @import '_colors.scss';
+@import '_grid.scss';
 
-.wrapper {
-  display:block;
-  background: $bgColorTest;
-  .something-else {
-    display:none;
-  }
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
 }

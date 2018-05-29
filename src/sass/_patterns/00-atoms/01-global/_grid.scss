@@ -1,0 +1,11 @@
+.wrapper {
+	display: grid;
+	width: 100% - percentage(32 / 576);
+  margin: 0 auto;
+	grid-template-columns: repeat(12, 1fr);
+	column-gap: percentage(32 / 576);
+}
+
+// .col {
+//
+// }
