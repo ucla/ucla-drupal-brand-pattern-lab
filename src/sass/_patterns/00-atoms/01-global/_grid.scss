@@ -26,11 +26,31 @@
   height: 80px;
 }
 
-@include make-grid-breakpoints();
-
 .col {
 	display: flex;
   justify-content: center;
   align-items: center;
 	background: $tempColumnBackground;
+}
+
+// numbered "col-infix-x" columns
+@each $breakpoint in map-keys($grid-breakpoints) {
+  @for $i from 1 through $grid-columns {
+    $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
+
+    // this gets duped when the "breakpoint-infix" function returns an empty string
+    // i.e. we don't have a infix value for "xs"
+    // .col-#{$i} {
+    //   @include make-col($i, $columns);
+    // }
+
+    // "infix" column classes
+    @include media-breakpoint-up($breakpoint, $grid-breakpoints) {
+      .col#{$infix}-#{$i} {
+        grid-column-start: span $i;
+      }
+    }
+
+    // do offset classes here
+  }
 }

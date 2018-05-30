@@ -1,50 +1,7 @@
 /*
  * Grid utilities
  */
-
-@mixin make-grid-breakpoints(
-  $columns: $grid-columns,
-  $gutters: $grid-gutter-widths,
-  $margins: $grid-container-margins,
-  $breakpoints: $grid-breakpoints
-) {
-  // numbered "span" columns
-  @each $breakpoint in map-keys($breakpoints) {
-    @for $i from 1 through $columns {
-      $infix: breakpoint-infix($breakpoint, $breakpoints);
-      // this gets duped when the "breakpoint-infix" function returns an empty string
-      // i.e. we don't have a infix value for "xs"
-      // .col-#{$i} {
-      //   @include make-col($i, $columns);
-      // }
-
-      // "infix" column classes
-      @include media-breakpoint-up($breakpoint, $breakpoints) {
-        .col#{$infix}-#{$i} {
-          @include make-col($i, $columns);
-        }
-      }
-    }
-
-    // do offset classes here
-  }
-}
-
-@mixin make-col(
-  $size,
-  $columns: $grid-columns
-) {
-  grid-column-start: span $size;
-}
-
-@mixin make-col-offset(
-  $size,
-  $columns: $grid-columns
-) {
-  grid-column-start: $size;
-}
-
-// some utility functions
+ 
 // calculate the gutter as percentage
 @function get-gutter-as-percentage(
   $breakpoint,
