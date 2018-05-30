@@ -16,13 +16,13 @@
 
 .grid {
   // establish grid styles
-  width: 100% - 2 * get-gutter-as-percentage('xs', $grid-gutter-widths, $grid-breakpoints);
+  width: 100% - get-gutter-as-percentage('xs', $grid-gutter-widths, $grid-breakpoints);
   margin: 0 auto;
   display: grid;
   grid-template-columns: repeat($grid-columns, 1fr);
   grid-template-rows: 1fr;
-  column-gap: get-gutter-as-percentage('xs', $grid-gutter-widths, $grid-breakpoints);
-  grid-column-gap: get-gutter-as-percentage('xs', $grid-gutter-widths, $grid-breakpoints);
+  column-gap: get-gutter-as-percentage('xs', $grid-gutter-widths, $grid-breakpoints) / 2;
+  grid-column-gap: get-gutter-as-percentage('xs', $grid-gutter-widths, $grid-breakpoints) / 2;
   height: 80px;
 }
 
@@ -38,19 +38,21 @@
   @for $i from 1 through $grid-columns {
     $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
 
-    // this gets duped when the "breakpoint-infix" function returns an empty string
-    // i.e. we don't have a infix value for "xs"
-    // .col-#{$i} {
-    //   @include make-col($i, $columns);
-    // }
-
     // "infix" column classes
     @include media-breakpoint-up($breakpoint, $grid-breakpoints) {
+      // this gets duped when the "breakpoint-infix" function returns an empty string
+      // i.e. we don't have a infix value for "xs"
+      // .col-#{$i} {
+      //   @include make-col($i, $columns);
+      // }
+
       .col#{$infix}-#{$i} {
         grid-column-start: span $i;
       }
+
+      // do offset classes here
     }
 
-    // do offset classes here
+
   }
 }

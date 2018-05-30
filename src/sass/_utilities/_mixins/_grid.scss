@@ -8,5 +8,5 @@
   $gutters,
   $breakpoints
 ) {
-  @return percentage(map-get($gutters, $breakpoint) / breakpoint-max($breakpoint, $breakpoints) / 2);
+  @return percentage(map-get($gutters, $breakpoint) / breakpoint-max($breakpoint, $breakpoints));
 }
