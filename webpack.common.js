@@ -22,6 +22,7 @@ module.exports = {
   resolve: {
     modules: [
       "node_modules",
+      // we may be able to move these declarations to a package.json if that's desirable
       "src/sass/_patterns/00-atoms/01-global",
       "src/sass/_patterns/00-atoms/02-text",
       "src/sass/_patterns/00-atoms/03-lists",

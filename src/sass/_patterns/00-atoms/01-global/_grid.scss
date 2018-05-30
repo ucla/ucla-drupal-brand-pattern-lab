@@ -1,46 +1,25 @@
+//define main container
 .grid-container {
-	width: 100%;
-	justify-content: center;
-	background: rgba(0,255,255,0.3);
+  width: 100%;
+  justify-content: center;
+  background: $tempContainerBackground;
+}
+
+// set margins for grid-container at various breakpoints
+@each $breakpoint, $margin in $grid-container-margins {
+  @include media-breakpoint-up($breakpoint, $grid-breakpoints) {
+    margin:0 $margin;
+  }
 }
 
 .grid {
-	width: 100% - percentage(32 / 575);
-	height: 80px;
-  margin: 0 auto;
-	display: grid;
-	grid-template-columns: repeat(12, 1fr);
-	grid-template-rows: 1fr;
-	column-gap: percentage(32 / 575);
+  @include make-grid();
+  height: 80px;
 }
 
 .col {
 	display: flex;
   justify-content: center;
   align-items: center;
-	background: rgba(255,0,255,0.3);
-}
-
-@include media-breakpoint-up('sm') {
-	.grid-container {
-		margin: 0 18px;
-	}
-}
-
-@include media-breakpoint-up('md') {
-	.grid-container {
-		margin: 0 24px;
-	}
-}
-
-@include media-breakpoint-up('lg') {
-	.grid-container {
-		margin: 0 32px;
-	}
-}
-
-@include media-breakpoint-up('xl') {
-	.grid-container {
-		margin: 0 40px;
-	}
+	background: $tempColumnBackground;
 }

@@ -1,0 +1,52 @@
+/*
+ * Grid utilities
+ */
+
+@mixin make-grid(
+  $columns: $grid-columns,
+  $gutters: $grid-gutter-widths,
+  $margins: $grid-container-margins,
+  $breakpoints: $grid-breakpoints
+) {
+  // establish grid styles
+  width: 100% - get-gutter-as-percentage('xs', $gutters, $breakpoints);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat($grid-columns, 1fr);
+  grid-template-rows: 1fr;
+  column-gap: get-gutter-as-percentage('xs', $gutters, $breakpoints);
+  grid-column-gap: get-gutter-as-percentage('xs', $gutters, $breakpoints);
+
+  // numbered "span" columns
+  @for $i from 1 through $columns {
+    .col-#{$i} {
+      @include make-col($i, $columns);
+    }
+
+    // do offset classes here
+  }
+}
+
+@mixin make-col(
+  $size,
+  $columns: $grid-columns
+) {
+  grid-column-start: span $size;
+}
+
+@mixin make-col-offset(
+  $size,
+  $columns: $grid-columns
+) {
+  grid-column-start: $size;
+}
+
+// some utility functions
+// calculate the gutter as percentage
+@function get-gutter-as-percentage(
+  $breakpoint,
+  $gutters,
+  $breakpoints
+) {
+  @return percentage(map-get($gutters, $breakpoint) / map-get($breakpoints, breakpoint-next($breakpoint)))
+}

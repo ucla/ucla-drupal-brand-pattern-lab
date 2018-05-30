@@ -1,0 +1,51 @@
+/*
+ * Grid parameter defaults
+ * These are used to customize the grid layout
+ * Feel free to overwrite them as necessary
+ */
+
+$grid-columns: 12 !default;
+
+$grid-breakpoints: (
+  xs: 0px,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px
+) !default;
+
+$grid-gutter-widths: (
+  xs: 32px,
+  sm: 30px,
+  md: 30px,
+  lg: 30px,
+  xl: 30px
+) !default;
+
+$grid-container-margins: (
+  sm: 18px,
+  md: 24px,
+  lg: 30px,
+  xl: 40px
+) !default;
+
+/* variables that have been marked for deprecation */
+// this may reappear as containers get designed
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1140px
+) !default;
+
+
+
+/*
+ * colors for patternlab use only
+ * should not used on brand site or in production
+ * they can be renamed freely (as long as references are updated)
+ * brand colors should be stored in `src/sass/_patterns/00-atoms/01-global/_colors.scss`
+ */
+$bgColorTest: blue;
+$tempColumnBackground: rgba(255,0,255,0.3);
+$tempContainerBackground: rgba(0,255,255,0.3);
