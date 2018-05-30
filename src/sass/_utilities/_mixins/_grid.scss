@@ -8,19 +8,22 @@
   $margins: $grid-container-margins,
   $breakpoints: $grid-breakpoints
 ) {
-  // establish grid styles
-  width: 100% - get-gutter-as-percentage('xs', $gutters, $breakpoints);
-  margin: 0 auto;
-  display: grid;
-  grid-template-columns: repeat($grid-columns, 1fr);
-  grid-template-rows: 1fr;
-  column-gap: get-gutter-as-percentage('xs', $gutters, $breakpoints);
-  grid-column-gap: get-gutter-as-percentage('xs', $gutters, $breakpoints);
-
   // numbered "span" columns
-  @for $i from 1 through $columns {
-    .col-#{$i} {
-      @include make-col($i, $columns);
+  @each $breakpoint in map-keys($breakpoints) {
+    @for $i from 1 through $columns {
+      $infix: breakpoint-infix($breakpoint, $breakpoints);
+      // this gets duped when the "breakpoint-infix" function returns an empty string
+      // i.e. we don't have a infix value for "xs"
+      // .col-#{$i} {
+      //   @include make-col($i, $columns);
+      // }
+
+      // "infix" column classes
+      @include media-breakpoint-up($breakpoint, $breakpoints) {
+        .col#{$infix}-#{$i} {
+          @include make-col($i, $columns);
+        }
+      }
     }
 
     // do offset classes here
@@ -48,5 +51,5 @@
   $gutters,
   $breakpoints
 ) {
-  @return percentage(map-get($gutters, $breakpoint) / map-get($breakpoints, breakpoint-next($breakpoint)))
+  @return percentage(map-get($gutters, $breakpoint) / breakpoint-max($breakpoint, $breakpoints));
 }

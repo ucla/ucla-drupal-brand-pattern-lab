@@ -8,14 +8,25 @@
 // set margins for grid-container at various breakpoints
 @each $breakpoint, $margin in $grid-container-margins {
   @include media-breakpoint-up($breakpoint, $grid-breakpoints) {
-    margin:0 $margin;
+    .grid-container {
+      margin:0 $margin;
+    }
   }
 }
 
 .grid {
-  @include make-grid();
+  // establish grid styles
+  width: 100% - get-gutter-as-percentage('xs', $grid-gutter-widths, $grid-breakpoints);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat($grid-columns, 1fr);
+  grid-template-rows: 1fr;
+  column-gap: get-gutter-as-percentage('xs', $grid-gutter-widths, $grid-breakpoints) / 2;
+  grid-column-gap: get-gutter-as-percentage('xs', $grid-gutter-widths, $grid-breakpoints) / 2;
   height: 80px;
 }
+
+@include make-grid();
 
 .col {
 	display: flex;
