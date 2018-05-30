@@ -1,10 +1,33 @@
-// @import './_patterns/00-atoms/01-global/_colors.scss';
+/*
+ * Base / Framework includes
+ * These are done without fancy references because:
+ *  1) There shouldn't be too many of them (yeah right)
+ *  2) We can have naming conflicts this way
+ *  3) They're utility includes that don't produce styles on their own
+ *  4) We don't need as many messy references in `webpack.config.js`
+ */
+@import './_utilities/_variables.scss';
+@import './_utilities/_mixins/_breakpoints.scss';
+@import './_utilities/_mixins/_grid.scss';
+
+/*
+ * Override variable definitions here
+ */
+ // $grid-columns: 8 <-- for example
+
+/*
+ * Begin pattern includes
+ * See `webpack.common.js` for aliasing
+ */
+@import '_grid.scss';
 @import '_colors.scss';
 
-.wrapper {
+// this is being used to test the build
+// feel free to remove it later
+.ignorable-wrapper {
   display:block;
   background: $bgColorTest;
-  .something-else {
+  .something-useless {
     display:none;
   }
 }
