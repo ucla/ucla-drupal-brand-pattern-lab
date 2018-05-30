@@ -1,4 +1,4 @@
-//define main container
+// define grid container
 .grid-container {
   width: 100%;
   justify-content: center;
@@ -14,8 +14,8 @@
   }
 }
 
+// establish grid styles
 .grid {
-  // establish grid styles
   width: 100% - get-gutter-as-percentage('xs', $grid-gutter-widths, $grid-breakpoints);
   margin: 0 auto;
   display: grid;
@@ -26,6 +26,7 @@
   height: 80px;
 }
 
+// basic column styles
 .col {
 	display: flex;
   justify-content: center;
@@ -38,7 +39,6 @@
   @for $i from 1 through $grid-columns {
     $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
 
-    // "infix" column classes
     @include media-breakpoint-up($breakpoint, $grid-breakpoints) {
       // this gets duped when the "breakpoint-infix" function returns an empty string
       // i.e. we don't have a infix value for "xs"
@@ -46,6 +46,7 @@
       //   @include make-col($i, $columns);
       // }
 
+      // "infix" column classes
       .col#{$infix}-#{$i} {
         grid-column-start: span $i;
       }
