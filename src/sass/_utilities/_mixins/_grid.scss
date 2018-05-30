@@ -2,7 +2,7 @@
  * Grid utilities
  */
 
-@mixin make-grid(
+@mixin make-grid-breakpoints(
   $columns: $grid-columns,
   $gutters: $grid-gutter-widths,
   $margins: $grid-container-margins,

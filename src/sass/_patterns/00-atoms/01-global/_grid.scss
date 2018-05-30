@@ -26,7 +26,7 @@
   height: 80px;
 }
 
-@include make-grid();
+@include make-grid-breakpoints();
 
 .col {
 	display: flex;
