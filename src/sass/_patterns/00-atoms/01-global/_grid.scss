@@ -33,7 +33,7 @@
 	background: $tempColumnBackground;
 }
 
-// numbered "col-infix-x" columns
+// build numbered column classes
 @each $breakpoint in map-keys($grid-breakpoints) {
   @for $i from 1 through $grid-columns {
     $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
