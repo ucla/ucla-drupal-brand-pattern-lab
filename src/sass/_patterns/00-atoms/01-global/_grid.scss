@@ -16,13 +16,13 @@
 
 .grid {
   // establish grid styles
-  width: 100% - get-gutter-as-percentage('xs', $grid-gutter-widths, $grid-breakpoints);
+  width: 100% - 2 * get-gutter-as-percentage('xs', $grid-gutter-widths, $grid-breakpoints);
   margin: 0 auto;
   display: grid;
   grid-template-columns: repeat($grid-columns, 1fr);
   grid-template-rows: 1fr;
-  column-gap: get-gutter-as-percentage('xs', $grid-gutter-widths, $grid-breakpoints) / 2;
-  grid-column-gap: get-gutter-as-percentage('xs', $grid-gutter-widths, $grid-breakpoints) / 2;
+  column-gap: get-gutter-as-percentage('xs', $grid-gutter-widths, $grid-breakpoints);
+  grid-column-gap: get-gutter-as-percentage('xs', $grid-gutter-widths, $grid-breakpoints);
   height: 80px;
 }
 
