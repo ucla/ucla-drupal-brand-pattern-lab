@@ -10,16 +10,16 @@ $grid-breakpoints: (
   xs: 0px,
   sm: 576px,
   md: 768px,
-  lg: 992px,
-  xl: 1200px
+  lg: 1024px,
+  xl: 1280px
 ) !default;
 
 $grid-gutter-widths: (
   xs: 32px,
-  sm: 30px,
-  md: 30px,
-  lg: 30px,
-  xl: 30px
+  sm: 32px,
+  md: 32px,
+  lg: 32px,
+  xl: 32px
 ) !default;
 
 $grid-container-margins: (
@@ -35,7 +35,7 @@ $container-max-widths: (
   sm: 540px,
   md: 720px,
   lg: 960px,
-  xl: 1140px
+  xl: 1200px
 ) !default;
 
 
