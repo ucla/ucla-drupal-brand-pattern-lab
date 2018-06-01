@@ -1,3 +1,4 @@
+# PatternLab installation / usage documentation
 This PHP Drupal edition of Pattern Lab is for UCLA's brand guidelines website.
 
 ## Pattern Lab Twig Standard Edition for Drupal
@@ -51,33 +52,7 @@ Then open [http://localhost:8080](http://localhost:8080) in your browser.
 $	composer update
 ```
 
-## Webpack build
-This section describes the [webpack](https://webpack.js.org/) bundling tool.
-
-### Getting Started with Webpack
-```
-$ npm install
-```
-The above commands will install all dependencies. Then to produce output files, you would execute one of the following commands:
-
-For Development:
-```
-$ npm run build
-```
-
-For Production:
-```
-$ npm run live
-```
-
-Output files can be found in `/public/assets`.
-
-## More Documentation
-* [PatternLab Documentation]('docs/patternlab.md')
-* [CSS Documentation]('docs/css.md')
-* [Javascript Documentation]('docs/javascript.md')
-
-## External Documentation
+## Other Documentation
 
 These are crucial pieces that contains documentation that is good to understand:
 

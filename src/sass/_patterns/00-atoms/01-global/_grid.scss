@@ -1,0 +1,63 @@
+// set margins for grid-container at various breakpoints
+@each $breakpoint, $margin in $grid-container-margins {
+  @include media-breakpoint-up($breakpoint, $grid-breakpoints) {
+    .grid {
+      margin: 0 $margin;
+    }
+  }
+}
+
+// set width for grid at various breakpoints
+@each $breakpoint, $width in $container-max-widths {
+  @include media-breakpoint-up($breakpoint, $grid-breakpoints) {
+    .grid {
+			width: percentage($width / map-get($grid-breakpoints, $breakpoint));
+		  max-width: $width;
+    }
+  }
+}
+
+// establish grid styles
+.grid {
+  width: 100%;
+	height: 80px;
+	padding: 0 get-gutter-as-percentage('xs', $grid-gutter-widths, $grid-breakpoints) / 4;
+  display: grid;
+  grid-template-columns: repeat($grid-columns, 1fr);
+  grid-template-rows: 1fr;
+  column-gap: get-gutter-as-percentage('xs', $grid-gutter-widths, $grid-breakpoints) / 2;
+  grid-column-gap: get-gutter-as-percentage('xs', $grid-gutter-widths, $grid-breakpoints) / 2;
+	background: $tempContainerBackground;
+}
+
+// basic column styles
+.col {
+	display: flex;
+  justify-content: center;
+  align-items: center;
+	background: $tempColumnBackground;
+}
+
+// build numbered column classes
+@each $breakpoint in map-keys($grid-breakpoints) {
+  @for $i from 1 through $grid-columns {
+    $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
+
+    @include media-breakpoint-up($breakpoint, $grid-breakpoints) {
+      // this gets duped when the "breakpoint-infix" function returns an empty string
+      // i.e. we don't have a infix value for "xs"
+      // .col-#{$i} {
+      //   @include make-col($i, $columns);
+      // }
+
+      // "infix" column classes
+      .col#{$infix}-#{$i} {
+        grid-column-start: span $i;
+      }
+
+      // do offset classes here
+    }
+
+
+  }
+}

@@ -1,0 +1,12 @@
+/*
+ * Grid utilities
+ */
+
+// calculate the gutter as percentage
+@function get-gutter-as-percentage(
+  $breakpoint,
+  $gutters,
+  $breakpoints
+) {
+  @return percentage(map-get($gutters, $breakpoint) / breakpoint-max($breakpoint, $breakpoints));
+}
