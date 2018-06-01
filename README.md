@@ -72,7 +72,7 @@ $ npm run live
 
 Output files can be found in `/public/assets`.
 
-## More Documentation
+## More Documentation (these don't work on BitBucket)
 * [PatternLab Documentation]('src/master/docs/patternlab.md')
 * [CSS Documentation]('src/master/docs/css.md')
 * [Javascript Documentation]('src/master/docs/javascript.md')
