@@ -73,9 +73,9 @@ $ npm run live
 Output files can be found in `/public/assets`.
 
 ## More Documentation
-* [PatternLab Documentation]('./docs/patternlab.md')
-* [CSS Documentation]('./docs/css.md')
-* [Javascript Documentation]('./docs/javascript.md')
+* [PatternLab Documentation]('src/master/docs/patternlab.md')
+* [CSS Documentation]('src/master/docs/css.md')
+* [Javascript Documentation]('src/master/docs/javascript.md')
 
 ## External Documentation
 
