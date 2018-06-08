@@ -2,6 +2,7 @@
 .idea
 export/*
 public/*
+!public/assets
 vendor/*
 source/styleguide/*
 config/*.json
