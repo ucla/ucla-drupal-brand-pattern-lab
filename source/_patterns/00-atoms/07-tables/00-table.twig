@@ -1,50 +1,249 @@
-<table>
-	<thead>
-		<tr>
-			<th>Table Heading 1</th>
-			<th>Table Heading 2</th>
-			<th>Table Heading 3</th>
-			<th>Table Heading 4</th>
-			<th>Table Heading 5</th>
-		</tr>
-	</thead>
-	<tfoot>
-		<tr>
-			<th>Table Footer 1</th>
-			<th>Table Footer 2</th>
-			<th>Table Footer 3</th>
-			<th>Table Footer 4</th>
-			<th>Table Footer 5</th>
-		</tr>
-	</tfoot>
-	<tbody>
-	<tr>
-		<td>Table Cell 1</td>
-		<td>Table Cell 2</td>
-		<td>Table Cell 3</td>
-		<td>Table Cell 4</td>
-		<td>Table Cell 5</td>
-	</tr>
-	<tr>
-		<td>Table Cell 1</td>
-		<td>Table Cell 2</td>
-		<td>Table Cell 3</td>
-		<td>Table Cell 4</td>
-		<td>Table Cell 5</td>
-	</tr>
-	<tr>
-		<td>Table Cell 1</td>
-		<td>Table Cell 2</td>
-		<td>Table Cell 3</td>
-		<td>Table Cell 4</td>
-		<td>Table Cell 5</td>
-	</tr>
-	<tr>
-		<td>Table Cell 1</td>
-		<td>Table Cell 2</td>
-		<td>Table Cell 3</td>
-		<td>Table Cell 4</td>
-		<td>Table Cell 5</td>
-	</tr>
-	</tbody>
-</table>
+<div class="table-container">
+
+	{# BORDERED TABLES #}
+	<h2>Bordered Tables</h2>
+
+	<div class="table-responsive">
+		<table class="table table-bordered">
+			<caption>Table Caption</caption>
+		  <thead>
+		    <tr>
+		      <th scope="col">Table Header</th>
+		      <th scope="col">Table Header</th>
+		      <th scope="col">Table Header</th>
+		      <th scope="col">Table Header</th>
+		    </tr>
+		  </thead>
+		  <tbody>
+		    <tr>
+		      <td>Epsum factorial non deposit quid pro quo hic escorol. Olypian quarrels et gorilla congolium sic ad nauseum. Souvlaki ignitus carborundum.</td>
+		      <td>Epsum factorial non deposit quid pro quo hic escorol. Olypian quarrels et gorilla congolium sic ad nauseum. Souvlaki ignitus carborundum.</td>
+		      <td>Epsum factorial non deposit quid pro quo hic escorol. Olypian quarrels et gorilla congolium sic ad nauseum. Souvlaki ignitus carborundum.</td>
+					<td>Epsum factorial non deposit quid pro quo hic escorol. Olypian quarrels et gorilla congolium sic ad nauseum. Souvlaki ignitus carborundum.</td>
+		    </tr>
+		    <tr>
+		      <td>Epsum factorial non deposit quid pro quo hic escorol. Olypian quarrels et gorilla congolium sic ad nauseum. Souvlaki ignitus carborundum.</td>
+		      <td>Epsum factorial non deposit quid pro quo hic escorol. Olypian quarrels et gorilla congolium sic ad nauseum. Souvlaki ignitus carborundum.</td>
+		      <td>Epsum factorial non deposit quid pro quo hic escorol. Olypian quarrels et gorilla congolium sic ad nauseum. Souvlaki ignitus carborundum.</td>
+		      <td>Epsum factorial non deposit quid pro quo hic escorol. Olypian quarrels et gorilla congolium sic ad nauseum. Souvlaki ignitus carborundum.</td>
+		    </tr>
+		  </tbody>
+		</table>
+	</div>
+
+
+	{# BORDERED TABLE WITH HIGHLIGHTED ROW #}
+	<div class="table-responsive">
+		<table class="table table-bordered">
+			<caption>Table Caption</caption>
+		  <thead>
+		    <tr>
+		      <th scope="col">Table Header</th>
+		      <th scope="col">Table Header</th>
+		      <th scope="col">Table Header</th>
+		      <th scope="col">Table Header</th>
+		    </tr>
+		  </thead>
+		  <tbody>
+		    <tr>
+		      <td>Epsum factorial non deposit quid pro quo hic escorol. Olypian quarrels et gorilla congolium sic ad nauseum. Souvlaki ignitus carborundum.</td>
+		      <td>Epsum factorial non deposit quid pro quo hic escorol. Olypian quarrels et gorilla congolium sic ad nauseum. Souvlaki ignitus carborundum.</td>
+		      <td>Epsum factorial non deposit quid pro quo hic escorol. Olypian quarrels et gorilla congolium sic ad nauseum. Souvlaki ignitus carborundum.</td>
+					<td>Epsum factorial non deposit quid pro quo hic escorol. Olypian quarrels et gorilla congolium sic ad nauseum. Souvlaki ignitus carborundum.</td>
+		    </tr>
+		    <tr class="highlight">
+		      <td>Epsum factorial non deposit quid pro quo hic escorol. Olypian quarrels et gorilla congolium sic ad nauseum. Souvlaki ignitus carborundum.</td>
+		      <td>Epsum factorial non deposit quid pro quo hic escorol. Olypian quarrels et gorilla congolium sic ad nauseum. Souvlaki ignitus carborundum.</td>
+		      <td>Epsum factorial non deposit quid pro quo hic escorol. Olypian quarrels et gorilla congolium sic ad nauseum. Souvlaki ignitus carborundum.</td>
+		      <td>Epsum factorial non deposit quid pro quo hic escorol. Olypian quarrels et gorilla congolium sic ad nauseum. Souvlaki ignitus carborundum.</td>
+		    </tr>
+		  </tbody>
+		</table>
+	</div>
+
+
+	{# BORDERED TABLE WITH HIGHLIGHTED COLUMN #}
+	<div class="table-responsive">
+		<table class="table table-bordered">
+			<caption>Table Caption</caption>
+			<colgroup class="highlight"></colgroup> {# COLUMN 1 #}
+			<colgroup></colgroup> {# COLUMN 2 #}
+			<colgroup></colgroup> {# COLUMN 3 #}
+			<colgroup></colgroup> {# COLUMN 4 #}
+		  <thead>
+		    <tr>
+		      <th scope="col">Table Header</th>
+		      <th scope="col">Table Header</th>
+		      <th scope="col">Table Header</th>
+		      <th scope="col">Table Header</th>
+		    </tr>
+		  </thead>
+		  <tbody>
+		    <tr>
+		      <td>Epsum factorial non deposit quid pro quo hic escorol. Olypian quarrels et gorilla congolium sic ad nauseum. Souvlaki ignitus carborundum.</td>
+		      <td>Epsum factorial non deposit quid pro quo hic escorol. Olypian quarrels et gorilla congolium sic ad nauseum. Souvlaki ignitus carborundum.</td>
+		      <td>Epsum factorial non deposit quid pro quo hic escorol. Olypian quarrels et gorilla congolium sic ad nauseum. Souvlaki ignitus carborundum.</td>
+					<td>Epsum factorial non deposit quid pro quo hic escorol. Olypian quarrels et gorilla congolium sic ad nauseum. Souvlaki ignitus carborundum.</td>
+		    </tr>
+		    <tr>
+		      <td>Epsum factorial non deposit quid pro quo hic escorol. Olypian quarrels et gorilla congolium sic ad nauseum. Souvlaki ignitus carborundum.</td>
+		      <td>Epsum factorial non deposit quid pro quo hic escorol. Olypian quarrels et gorilla congolium sic ad nauseum. Souvlaki ignitus carborundum.</td>
+		      <td>Epsum factorial non deposit quid pro quo hic escorol. Olypian quarrels et gorilla congolium sic ad nauseum. Souvlaki ignitus carborundum.</td>
+		      <td>Epsum factorial non deposit quid pro quo hic escorol. Olypian quarrels et gorilla congolium sic ad nauseum. Souvlaki ignitus carborundum.</td>
+		    </tr>
+		  </tbody>
+		</table>
+	</div>
+
+
+	{# BORDERED TABLE WITH SORT BY COLUMN #}
+	<!-- <table class="table table-bordered">
+		<caption>Table Caption</caption>
+	  <thead>
+	    <tr>
+				<th scope="col"><a href="#" class="sort-by">Table Header</a></th>
+				<th scope="col"><a href="#" class="sort-by">Table Header</a></th>
+				<th scope="col"><a href="#" class="sort-by">Table Header</a></th>
+				<th scope="col"><a href="#" class="sort-by">Table Header</a></th>
+	    </tr>
+	  </thead>
+	  <tbody>
+	    <tr>
+	      <td>Epsum factorial non deposit quid pro quo hic escorol. Olypian quarrels et gorilla congolium sic ad nauseum. Souvlaki ignitus carborundum.</td>
+	      <td>Epsum factorial non deposit quid pro quo hic escorol. Olypian quarrels et gorilla congolium sic ad nauseum. Souvlaki ignitus carborundum.</td>
+	      <td>Epsum factorial non deposit quid pro quo hic escorol. Olypian quarrels et gorilla congolium sic ad nauseum. Souvlaki ignitus carborundum.</td>
+				<td>Epsum factorial non deposit quid pro quo hic escorol. Olypian quarrels et gorilla congolium sic ad nauseum. Souvlaki ignitus carborundum.</td>
+	    </tr>
+	    <tr>
+	      <td>Epsum factorial non deposit quid pro quo hic escorol. Olypian quarrels et gorilla congolium sic ad nauseum. Souvlaki ignitus carborundum.</td>
+	      <td>Epsum factorial non deposit quid pro quo hic escorol. Olypian quarrels et gorilla congolium sic ad nauseum. Souvlaki ignitus carborundum.</td>
+	      <td>Epsum factorial non deposit quid pro quo hic escorol. Olypian quarrels et gorilla congolium sic ad nauseum. Souvlaki ignitus carborundum.</td>
+	      <td>Epsum factorial non deposit quid pro quo hic escorol. Olypian quarrels et gorilla congolium sic ad nauseum. Souvlaki ignitus carborundum.</td>
+	    </tr>
+	  </tbody>
+	</table> -->
+
+
+	{# BORDERLESS TABLES #}
+	<h2>Borderless Tables</h2>
+	<div class="table-responsive">
+		<table class="table">
+			<caption>Table Caption</caption>
+		  <thead>
+		    <tr>
+		      <th scope="col">Table Header</th>
+		      <th scope="col">Table Header</th>
+		      <th scope="col">Table Header</th>
+		      <th scope="col">Table Header</th>
+		    </tr>
+		  </thead>
+		  <tbody>
+		    <tr>
+					<td>Epsum factorial non deposit quid pro quo hic escorol. Olypian quarrels et gorilla congolium sic ad nauseum. Souvlaki ignitus carborundum.</td>
+		      <td>Epsum factorial non deposit quid pro quo hic escorol. Olypian quarrels et gorilla congolium sic ad nauseum. Souvlaki ignitus carborundum.</td>
+		      <td>Epsum factorial non deposit quid pro quo hic escorol. Olypian quarrels et gorilla congolium sic ad nauseum. Souvlaki ignitus carborundum.</td>
+		      <td>Epsum factorial non deposit quid pro quo hic escorol. Olypian quarrels et gorilla congolium sic ad nauseum. Souvlaki ignitus carborundum.</td>
+		    </tr>
+		    <tr>
+					<td>Epsum factorial non deposit quid pro quo hic escorol. Olypian quarrels et gorilla congolium sic ad nauseum. Souvlaki ignitus carborundum.</td>
+		      <td>Epsum factorial non deposit quid pro quo hic escorol. Olypian quarrels et gorilla congolium sic ad nauseum. Souvlaki ignitus carborundum.</td>
+		      <td>Epsum factorial non deposit quid pro quo hic escorol. Olypian quarrels et gorilla congolium sic ad nauseum. Souvlaki ignitus carborundum.</td>
+		      <td>Epsum factorial non deposit quid pro quo hic escorol. Olypian quarrels et gorilla congolium sic ad nauseum. Souvlaki ignitus carborundum.</td>
+		    </tr>
+		  </tbody>
+		</table>
+	</div>
+
+
+	{# BORDERLESS TABLE WITH HIGHLIGHTED ROW #}
+	<div class="table-responsive">
+		<table class="table">
+			<caption>Table Caption</caption>
+		  <thead>
+		    <tr>
+		      <th scope="col">Table Header</th>
+		      <th scope="col">Table Header</th>
+		      <th scope="col">Table Header</th>
+		      <th scope="col">Table Header</th>
+		    </tr>
+		  </thead>
+		  <tbody>
+		    <tr>
+					<td>Epsum factorial non deposit quid pro quo hic escorol. Olypian quarrels et gorilla congolium sic ad nauseum. Souvlaki ignitus carborundum.</td>
+		      <td>Epsum factorial non deposit quid pro quo hic escorol. Olypian quarrels et gorilla congolium sic ad nauseum. Souvlaki ignitus carborundum.</td>
+		      <td>Epsum factorial non deposit quid pro quo hic escorol. Olypian quarrels et gorilla congolium sic ad nauseum. Souvlaki ignitus carborundum.</td>
+		      <td>Epsum factorial non deposit quid pro quo hic escorol. Olypian quarrels et gorilla congolium sic ad nauseum. Souvlaki ignitus carborundum.</td>
+		    </tr>
+		    <tr class="highlight">
+					<td>Epsum factorial non deposit quid pro quo hic escorol. Olypian quarrels et gorilla congolium sic ad nauseum. Souvlaki ignitus carborundum.</td>
+		      <td>Epsum factorial non deposit quid pro quo hic escorol. Olypian quarrels et gorilla congolium sic ad nauseum. Souvlaki ignitus carborundum.</td>
+		      <td>Epsum factorial non deposit quid pro quo hic escorol. Olypian quarrels et gorilla congolium sic ad nauseum. Souvlaki ignitus carborundum.</td>
+		      <td>Epsum factorial non deposit quid pro quo hic escorol. Olypian quarrels et gorilla congolium sic ad nauseum. Souvlaki ignitus carborundum.</td>
+		    </tr>
+		  </tbody>
+		</table>
+	</div>
+
+
+	{# BORDERLESS TABLE WITH HIGHLIGHTED COLUMN #}
+	<div class="table-responsive">
+		<table class="table">
+			<caption>Table Caption</caption>
+			<colgroup class="highlight"></colgroup> {# COLUMN 1 #}
+			<colgroup></colgroup> {# COLUMN 2 #}
+			<colgroup></colgroup> {# COLUMN 3 #}
+			<colgroup></colgroup> {# COLUMN 4 #}
+		  <thead>
+		    <tr>
+		      <th scope="col">Table Header</th>
+		      <th scope="col">Table Header</th>
+		      <th scope="col">Table Header</th>
+		      <th scope="col">Table Header</th>
+		    </tr>
+		  </thead>
+		  <tbody>
+		    <tr>
+					<td>Epsum factorial non deposit quid pro quo hic escorol. Olypian quarrels et gorilla congolium sic ad nauseum. Souvlaki ignitus carborundum.</td>
+		      <td>Epsum factorial non deposit quid pro quo hic escorol. Olypian quarrels et gorilla congolium sic ad nauseum. Souvlaki ignitus carborundum.</td>
+		      <td>Epsum factorial non deposit quid pro quo hic escorol. Olypian quarrels et gorilla congolium sic ad nauseum. Souvlaki ignitus carborundum.</td>
+		      <td>Epsum factorial non deposit quid pro quo hic escorol. Olypian quarrels et gorilla congolium sic ad nauseum. Souvlaki ignitus carborundum.</td>
+		    </tr>
+		    <tr>
+					<td>Epsum factorial non deposit quid pro quo hic escorol. Olypian quarrels et gorilla congolium sic ad nauseum. Souvlaki ignitus carborundum.</td>
+		      <td>Epsum factorial non deposit quid pro quo hic escorol. Olypian quarrels et gorilla congolium sic ad nauseum. Souvlaki ignitus carborundum.</td>
+		      <td>Epsum factorial non deposit quid pro quo hic escorol. Olypian quarrels et gorilla congolium sic ad nauseum. Souvlaki ignitus carborundum.</td>
+		      <td>Epsum factorial non deposit quid pro quo hic escorol. Olypian quarrels et gorilla congolium sic ad nauseum. Souvlaki ignitus carborundum.</td>
+		    </tr>
+		  </tbody>
+		</table>
+	</div>
+
+
+	{# BORDERLESS TABLE WITH SORT BY COLUMN #}
+	<!-- <h2>Borderless Tables</h2>
+	<table class="table">
+		<caption>Table Caption</caption>
+	  <thead>
+	    <tr>
+				<th scope="col"><a href="#" class="sort-by">Table Header</a></th>
+				<th scope="col"><a href="#" class="sort-by">Table Header</a></th>
+				<th scope="col"><a href="#" class="sort-by">Table Header</a></th>
+				<th scope="col"><a href="#" class="sort-by">Table Header</a></th>
+	    </tr>
+	  </thead>
+	  <tbody>
+	    <tr>
+				<td>Epsum factorial non deposit quid pro quo hic escorol. Olypian quarrels et gorilla congolium sic ad nauseum. Souvlaki ignitus carborundum.</td>
+	      <td>Epsum factorial non deposit quid pro quo hic escorol. Olypian quarrels et gorilla congolium sic ad nauseum. Souvlaki ignitus carborundum.</td>
+	      <td>Epsum factorial non deposit quid pro quo hic escorol. Olypian quarrels et gorilla congolium sic ad nauseum. Souvlaki ignitus carborundum.</td>
+	      <td>Epsum factorial non deposit quid pro quo hic escorol. Olypian quarrels et gorilla congolium sic ad nauseum. Souvlaki ignitus carborundum.</td>
+	    </tr>
+	    <tr>
+				<td>Epsum factorial non deposit quid pro quo hic escorol. Olypian quarrels et gorilla congolium sic ad nauseum. Souvlaki ignitus carborundum.</td>
+	      <td>Epsum factorial non deposit quid pro quo hic escorol. Olypian quarrels et gorilla congolium sic ad nauseum. Souvlaki ignitus carborundum.</td>
+	      <td>Epsum factorial non deposit quid pro quo hic escorol. Olypian quarrels et gorilla congolium sic ad nauseum. Souvlaki ignitus carborundum.</td>
+	      <td>Epsum factorial non deposit quid pro quo hic escorol. Olypian quarrels et gorilla congolium sic ad nauseum. Souvlaki ignitus carborundum.</td>
+	    </tr>
+	  </tbody>
+	</table> -->
+</div>
