@@ -6,16 +6,16 @@
  *  3) They're utility includes that don't produce styles on their own - think of them as "devDependencies"
  *  4) We don't need as many messy references in `webpack.config.js`
  */
-@import './_utilities/_reset.scss';
-@import './_utilities/_variables.scss';
-@import './_utilities/_mixins/_breakpoints.scss';
-@import './_utilities/_mixins/_grid.scss';
+@import "/_utilities/_reset";
+@import "/_utilities/_variables";
+@import "/_utilities/_mixins/_breakpoints";
+@import "/_utilities/_mixins/_grid";
 
 /*
  * Begin pattern includes
  * See `webpack.common.js` for aliasing
  */
-@import '_grid.scss';
-// @import '_colors.scss'; // commented out because it's empty again
+//@import "_grid";
+// @import "_colors"; // commented out because it"s empty again
 
-@import './base/_body.scss';
+@import "/base/_body";
