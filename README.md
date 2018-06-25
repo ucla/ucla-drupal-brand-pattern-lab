@@ -20,9 +20,9 @@ These are some helpful commands you can use on the command line for working with
 
 **One line start**
 
-This will generate Pattern Lab and watch for changes while running the local server:
+This will generate Pattern Lab and start both webpack and Pattern Lab in watch mode while running the local server:
 ```
-$ php core/console --watch
+$ npm run dev
 ```
 
 **Generate Pattern Lab**
@@ -60,7 +60,7 @@ $ npm install
 ```
 The above commands will install all dependencies. Then to produce output files, you would execute one of the following commands:
 
-For Development:
+For Development (builds files, does not use watch):
 ```
 $ npm run build
 ```
