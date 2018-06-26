@@ -16,7 +16,7 @@
  */
 @import '_grid.scss';
 @import '_tables.scss';
-// @import '_colors.scss'; // commented out because it's empty again
+@import '_colors.scss';
 
 html {
   box-sizing: border-box;
