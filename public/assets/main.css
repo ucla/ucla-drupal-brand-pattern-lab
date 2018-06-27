@@ -7,22 +7,6 @@
  *  4) We don't need as many messy references in `webpack.config.js`
  */
 /*------------------------------------*\
-    $RESET
-\*------------------------------------*/
-/* Border-Box http:/paulirish.com/2012/box-sizing-border-box-ftw/ */
-* {
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box; }
-
-html, body, div, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, ol, ul, li, form, legend, label, table, header, footer, nav, section, figure {
-  margin: 0;
-  padding: 0; }
-
-header, footer, nav, section, article, hgroup, figure {
-  display: block; }
-
-/*------------------------------------*\
     $VARIABLES
 \*------------------------------------*/
 /*
@@ -326,57 +310,208 @@ header, footer, nav, section, article, hgroup, figure {
   .col-xl-12 {
     grid-column-start: span 12; } }
 
-html {
+.table-container {
+  width: 80%;
+  margin: 0 auto; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 100%; }
+
+.table th, .table td {
   box-sizing: border-box;
-  font-size: 100%; }
+  padding: 16px; }
+
+.table th {
+  height: 56px;
+  border-bottom: 2px solid #005587;
+  background-color: #FFFFFF;
+  text-align: left;
+  font-size: 16px;
+  line-height: 24px; }
+
+.table td {
+  border-bottom: 1px solid #757575; }
+
+.table a:link,
+.table a:visited,
+.table a:hover,
+.table a:active {
+  color: #000000;
+  text-decoration: none; }
+
+.table th a, .table td a {
+  display: block;
+  width: 100%; }
+
+.table th a.sort-by {
+  padding-right: 18px;
+  position: relative; }
+
+.table a.sort-by:before,
+.table a.sort-by:after {
+  border: 4px solid transparent;
+  content: '';
+  display: block;
+  height: 0;
+  right: 5px;
+  top: 50%;
+  position: absolute;
+  width: 0; }
+
+.table a.sort-by:before {
+  border-bottom-color: #0B6EA6;
+  margin-top: -9px; }
+
+.table a.sort-by:after {
+  border-top-color: #0B6EA6;
+  margin-top: 1px; }
+
+.table .highlight {
+  background-color: #EBEBEB; }
+
+.table.table-bordered th {
+  border: 1px solid #005587;
+  background-color: #2774AE;
+  color: #FFFFFF; }
+
+.table.table-bordered td {
+  border: 1px solid #757575; }
+
+.table.table-bordered a:link,
+.table.table-bordered a:visited,
+.table.table-bordered a:hover,
+.table.table-bordered a:active {
+  color: #FFFFFF; }
+
+.table.table-bordered a.sort-by:before {
+  border-bottom-color: #FFFFFF; }
+
+.table.table-bordered a.sort-by:after {
+  border-top-color: #FFFFFF; }
+
+caption {
+  margin: 16px;
+  text-align: left;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: bold; }
+
+@media (max-width: 575.98px) {
+  .table-responsive-sm {
+    display: block;
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    -ms-overflow-style: -ms-autohiding-scrollbar; }
+    .table-responsive-sm > .table-bordered {
+      border: 0; } }
+
+@media (max-width: 767.98px) {
+  .table-responsive-md {
+    display: block;
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    -ms-overflow-style: -ms-autohiding-scrollbar; }
+    .table-responsive-md > .table-bordered {
+      border: 0; } }
+
+@media (max-width: 1023.98px) {
+  .table-responsive-lg {
+    display: block;
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    -ms-overflow-style: -ms-autohiding-scrollbar; }
+    .table-responsive-lg > .table-bordered {
+      border: 0; } }
+
+@media (max-width: 1279.98px) {
+  .table-responsive-xl {
+    display: block;
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    -ms-overflow-style: -ms-autohiding-scrollbar; }
+    .table-responsive-xl > .table-bordered {
+      border: 0; } }
+
+.table-responsive {
+  display: block;
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  -ms-overflow-style: -ms-autohiding-scrollbar; }
+  .table-responsive > .table-bordered {
+    border: 0; }
+
+.ucla-blue {
+  background: #2774AE; }
+
+.ucla-gold {
+  background: #FFD100; }
+
+.white {
+  background: #FFFFFF; }
+
+.lightest-blue {
+  background: #DAEBFE; }
+
+.lighter-blue {
+  background: #8BB8E8; }
+
+.darker-blue {
+  background: #005587; }
+
+.darkest-blue {
+  background: #003B5C; }
+
+.lightest-gold {
+  background: #FFF0A5; }
+
+.lighter-gold {
+  background: #FFDF42; }
+
+.darker-gold {
+  background: #FFC72C; }
+
+.darkest-gold {
+  background: #FFB81C; }
+
+.light-grey {
+  background: #EBEBEB; }
+
+.dark-grey {
+  background: #262626; }
+
+.lighter-grey {
+  background: #454545; }
+
+.default-state {
+  background: #0B6EA6; }
+
+.hover-state {
+  background: #0052E0; }
+
+.active-state {
+  background: #003B5C; }
+
+.focus-state {
+  background: #0052E0; }
+
+.disabled-state {
+  background: #5E5E5E; }
+
+.visited-state {
+  background: #5223B0; }
+
+html {
+  box-sizing: border-box; }
 
 *,
 *:before,
 *:after {
   box-sizing: inherit; }
-
-body {
-  background: #fff;
-  font-family: "Helvetica", "Arial", sans-serif;
-  -webkit-text-size-adjust: 100%;
-  color: #333; }
-
-/* Headings */
-/*Further Reading: http:/csswizardry.com/2012/02/pragmatic-practical-font-sizing-in-css/ */
-h1, .h1 {
-  font-size: 3.375rem;
-  line-height: 4.5rem; }
-
-h2, .h2 {
-  font-size: 2.25rem;
-  line-height: 3rem; }
-
-h3, .h3 {
-  font-size: 1.5rem;
-  line-height: 2rem; }
-
-h4, .h4 {
-  font-size: 1.125rem;
-  line-height: 1.5rem; }
-
-h5, .h5, .contextual-header {
-  font-size: 1rem;
-  line-height: 1.375rem; }
-
-h6, .h6 {
-  font-size: 0.667rem;
-  line-height: 1rem; }
-
-.display {
-  font-size: 4.5rem;
-  font-weight: bold;
-  line-height: 5rem; }
-
-.contextual-header {
-  font-weight: bold; }
-
-/* Subheadings */
-.subheading {
-  font-family: "Helvetica", "Arial", sans-serif;
-  font-weight: normal; }
 
