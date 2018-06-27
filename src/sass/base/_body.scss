@@ -1,5 +1,6 @@
 html {
   box-sizing: border-box;
+  font-size: $font-size-base;
 }
 
 *,
@@ -10,7 +11,7 @@ html {
 
 body {
 	background: $white;
-	font: 100%/1.5 $font;
+	font-family: $font;
 	-webkit-text-size-adjust: 100%;
 	color: $gray-dark;
 }

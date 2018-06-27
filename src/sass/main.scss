@@ -15,7 +15,8 @@
  * Begin pattern includes
  * See `webpack.common.js` for aliasing
  */
-//@import "_grid";
+@import "/_patterns/00-atoms/01-global/_grid";
 // @import "_colors"; // commented out because it"s empty again
 
 @import "/base/_body";
+@import "/base/_headings";
