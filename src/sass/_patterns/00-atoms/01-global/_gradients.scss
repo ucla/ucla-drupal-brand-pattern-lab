@@ -1,0 +1,27 @@
+.full-gradient {
+	@include linear-gradient(to right, $darkest-blue, $darker-blue, $ucla-blue, $lighter-blue, $lightest-blue);
+	height: 80px;
+	width: 960px;
+	margin: 2% 0;
+}
+
+.dark-gradient {
+	@include linear-gradient(to right, $darkest-blue, $darker-blue);
+	height: 80px;
+	width: 960px;
+	margin: 2% 0;
+}
+
+.medium-gradient {
+	@include linear-gradient(to right, $darker-blue, $ucla-blue);
+	height: 80px;
+	width: 960px;
+	margin: 2% 0;
+}
+
+.light-gradient {
+	@include linear-gradient(to right, $lighter-blue, $lightest-blue);
+	height: 80px;
+	width: 960px;
+	margin: 2% 0;
+}
