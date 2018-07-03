@@ -1,27 +1,31 @@
-.full-gradient {
-	@include linear-gradient(to right, $darkest-blue, $darker-blue, $ucla-blue, $lighter-blue, $lightest-blue);
+.gradient {
 	height: 80px;
 	width: 960px;
 	margin: 2% 0;
+	padding-left: 2%;
+	line-height: 80px;
+}
+
+.full-gradient {
+	@extend .gradient;
+	@include linear-gradient(to right, $darkest-blue, $darker-blue, $ucla-blue, $lighter-blue, $lightest-blue);
+	color: #00FFFF;
 }
 
 .dark-gradient {
+	@extend .gradient;
 	@include linear-gradient(to right, $darkest-blue, $darker-blue);
-	height: 80px;
-	width: 960px;
-	margin: 2% 0;
+	color: $white;
 }
 
 .medium-gradient {
+	@extend .gradient;
 	@include linear-gradient(to right, $darker-blue, $ucla-blue);
-	height: 80px;
-	width: 960px;
-	margin: 2% 0;
+	color: $white;
 }
 
 .light-gradient {
+	@extend .gradient;
 	@include linear-gradient(to right, $lighter-blue, $lightest-blue);
-	height: 80px;
-	width: 960px;
-	margin: 2% 0;
+	color: $dark-grey;
 }
