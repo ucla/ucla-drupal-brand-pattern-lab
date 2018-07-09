@@ -548,7 +548,7 @@ body {
   background: #FFFFFF;
   font-family: "Helvetica", "Arial", sans-serif;
   -webkit-text-size-adjust: 100%;
-  color: #333; }
+  color: #262626; }
 
 /* Headings */
 /*Further Reading: http:/csswizardry.com/2012/02/pragmatic-practical-font-sizing-in-css/ */
@@ -589,4 +589,21 @@ h6, .h6 {
 .subheading {
   font-family: "Helvetica", "Arial", sans-serif;
   font-weight: normal; }
+
+code {
+  font-family: Courier, monospace;
+  font-size: 1rem;
+  line-height: 1.5rem; }
+
+ins {
+  background-color: #DAEBFE;
+  text-decoration: none; }
+
+mark {
+  background-color: #FFF0A5; }
+
+.legal {
+  color: #757575;
+  font-size: .75rem;
+  line-height: 1.25rem; }
 
