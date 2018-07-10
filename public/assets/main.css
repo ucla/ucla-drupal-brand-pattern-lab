@@ -590,6 +590,34 @@ h6, .h6 {
   font-family: "Helvetica", "Arial", sans-serif;
   font-weight: normal; }
 
+a:link {
+  color: #0B6EA6; }
+
+a:active, a:hover {
+  color: #FFFFFF;
+  text-decoration: none; }
+
+a:active {
+  background-color: #003B5C; }
+
+a:hover {
+  background-color: #0052E0; }
+
+a:visited {
+  color: #5223B0; }
+
+a.light:link, a.light:visited {
+  color: #FFFFFF; }
+
+a.light:active, a.light:hover {
+  background-color: #FFFFFF; }
+
+a.light:active {
+  color: #003B5C; }
+
+a.light:hover {
+  color: #0052E0; }
+
 code {
   font-family: Courier, monospace;
   font-size: 1rem;

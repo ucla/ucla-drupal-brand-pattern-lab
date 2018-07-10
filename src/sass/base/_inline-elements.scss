@@ -1,3 +1,36 @@
+a {
+  &:link {
+    color: $default-state;
+  }
+  &:active, &:hover {
+    color: $white;
+    text-decoration: none;
+  }
+  &:active {
+    background-color: $active-state;
+  }
+  &:hover {
+    background-color: $hover-state;
+  }
+  &:visited {
+    color: $visited-state;
+  }
+  &.light {
+    &:link, &:visited {
+      color: $white;
+    }
+    &:active, &:hover {
+      background-color: $white;
+    }
+    &:active {
+      color: $darkest-blue;
+    }
+    &:hover {
+      color: $hover-state;
+    }
+  }
+}
+
 code {
   font-family: Courier, monospace;
   font-size: 1rem;
