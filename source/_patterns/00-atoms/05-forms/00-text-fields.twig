@@ -1,13 +1,16 @@
 {% import "forms.twig" as forms %}
+
+{# input(name, type, classes, label, placeholder, value, size, required, info, error) #}
+
 <fieldset>
-    {{ forms.input('Text Input') }}
+    {{ forms.input('Label', '', '', '', 'This is prompt text', '', '', '', 'Helpful text goes here') }}
+    {{ forms.input('Error Input', 'text', 'error', '', '', '', '', '', '', 'Error message here') }}
     {{ forms.input('Password', 'password') }}
     {{ forms.input('Web Address', 'url') }}
     {{ forms.input('Email', 'email') }}
-    {{ forms.input('Search', 'search') }}
-    {{ forms.input('Number', 'number') }}
-    {{ forms.input('Number', 'number') }}
+{#   {{ forms.input('Search', 'search') }}		#}
+{#   {{ forms.input('Number', 'number') }}		#}
     {{ forms.textarea('Textarea', 'Enter your message here') }}
-    {{ forms.input('Error Input', 'text', 'error') }}
-    {{ forms.input('Valid Input', 'text', 'valid') }}
+
+{#   {{ forms.input('Valid Input', 'text', 'valid') }}		#}
 </fieldset>
