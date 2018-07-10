@@ -607,3 +607,15 @@ mark {
   font-size: .75rem;
   line-height: 1.25rem; }
 
+blockquote {
+  border-left: #2774AE;
+  border-left-style: solid;
+  border-left-width: 8px;
+  padding: 0 0 5px 25px; }
+
+cite {
+  color: #525252;
+  display: block;
+  font-style: normal;
+  margin-top: 26px; }
+
