@@ -2,7 +2,7 @@
 
 {# input(name, type, classes, label, placeholder, value, size, required, info, error) #}
 
-<fieldset>
+<fieldset class="grid">
     {{ forms.input('Label', '', '', '', 'This is prompt text', '', '', '', 'Helpful text goes here') }}
     {{ forms.input('Error Input', 'text', 'error', '', '', '', '', '', '', 'Error message here') }}
     {{ forms.input('Password', 'password') }}
@@ -13,4 +13,12 @@
     {{ forms.textarea('Textarea', 'Enter your message here') }}
 
 {#   {{ forms.input('Valid Input', 'text', 'valid') }}		#}
+
+	<div class="field-container">
+		<label class="legal">
+			Legal copy
+			<span>Legal text goes here</span>
+		</label>
+	</div>
+	
 </fieldset>
