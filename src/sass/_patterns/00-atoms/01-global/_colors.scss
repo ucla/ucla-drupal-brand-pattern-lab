@@ -1,9 +1,6 @@
-// PRIMARY COLORS
 $ucla-blue: #2774AE;
 $ucla-gold: #FFD100;
 $white: #FFFFFF;
-
-// SECONDARY COLORS
 $lightest-blue: #DAEBFE;
 $lighter-blue: #8BB8E8;
 $darker-blue: #005587;
@@ -12,18 +9,9 @@ $lightest-gold: #FFF0A5;
 $lighter-gold: #FFDF42;
 $darker-gold: #FFC72C;
 $darkest-gold: #FFB81C;
-
-// BACKGROUND COLORS
 $light-grey: #EBEBEB;
-
-// TEXT COLORS
 $dark-grey: #262626;
-$lightest-grey: #757575;
 $lighter-grey: #454545;
-$medium-grey: #424242;
-$medium-grey2: #525252;
-
-// BUTTON / LINK STATE COLORS
 $default-state: #0B6EA6;
 $hover-state: #0052E0;
 $active-state: #003B5C;
@@ -31,6 +19,8 @@ $focus-state: #0052E0;
 $disabled-state: #5E5E5E;
 $visited-state: #5223B0;
 
+
+// PRIMARY COLORS
 .ucla-blue {
 	background: $ucla-blue;
 }
@@ -43,6 +33,8 @@ $visited-state: #5223B0;
 	background: $white;
 }
 
+
+// SECONDARY COLORS
 .lightest-blue {
 	background: $lightest-blue;
 }
@@ -75,6 +67,8 @@ $visited-state: #5223B0;
 	background: $darkest-gold;
 }
 
+
+// BACKGROUND COLORS
 .light-grey {
 	background: $light-grey;
 }
@@ -87,6 +81,8 @@ $visited-state: #5223B0;
 	background: $lighter-grey;
 }
 
+
+// BUTTON / LINK STATE COLORS
 .default-state {
 	background: $default-state;
 }
