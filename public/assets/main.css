@@ -554,6 +554,18 @@ caption {
   background: linear-gradient(to right, #8BB8E8, #DAEBFE);
   color: #262626; }
 
+p {
+  font-size: 1rem;
+  line-height: 1.5rem; }
+
+.lead {
+  font-size: 1.5rem;
+  line-height: 2rem; }
+
+.caption {
+  font-size: .75rem;
+  line-height: 1.25rem; }
+
 html {
   box-sizing: border-box;
   font-size: 100%; }
@@ -567,7 +579,7 @@ body {
   background: #FFFFFF;
   font-family: "Helvetica", "Arial", sans-serif;
   -webkit-text-size-adjust: 100%;
-  color: #333; }
+  color: #262626; }
 
 /* Headings */
 /*Further Reading: http:/csswizardry.com/2012/02/pragmatic-practical-font-sizing-in-css/ */
@@ -601,10 +613,90 @@ h6, .h6 {
   line-height: 5rem; }
 
 .contextual-header {
+  color: #424242;
   font-weight: bold; }
 
 /* Subheadings */
 .subheading {
   font-family: "Helvetica", "Arial", sans-serif;
   font-weight: normal; }
+
+a:link {
+  color: #0B6EA6; }
+
+a:active, a:hover {
+  color: #FFFFFF;
+  text-decoration: none; }
+
+a:active {
+  background-color: #003B5C; }
+  a:active[target="_blank"]:after {
+    background-image: url("/images/icons/icon-externallink-hover-active-focus.svg"); }
+
+a:hover {
+  background-color: #0052E0; }
+  a:hover[target="_blank"]:after {
+    background-image: url("/images/icons/icon-externallink-hover-active-focus.svg"); }
+
+a:visited {
+  color: #5223B0; }
+  a:visited:hover {
+    color: #FFFFFF; }
+  a:visited[target="_blank"]:after {
+    background-image: url("/images/icons/icon-externallink-visited.svg"); }
+
+a.light:link, a.light:visited {
+  color: #FFFFFF; }
+  a.light:link[target="_blank"]:after, a.light:visited[target="_blank"]:after {
+    background-image: url("/images/icons/icon-externallink-hover-active-focus.svg"); }
+
+a.light:active, a.light:hover {
+  background-color: #FFFFFF; }
+
+a.light:active {
+  color: #003B5C; }
+  a.light:active[target="_blank"]:after {
+    background-image: url("/images/icons/icon-externallink-active-dark.svg"); }
+
+a.light:hover {
+  color: #0052E0; }
+  a.light:hover[target="_blank"]:after {
+    background-image: url("/images/icons/icon-externallink-hover-dark.svg"); }
+
+a[target="_blank"]:after {
+  background-image: url("/images/icons/icon-externallink-default.svg");
+  background-size: 24px 24px;
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  content: ""; }
+
+code {
+  font-family: Courier, monospace;
+  font-size: 1rem;
+  line-height: 1.5rem; }
+
+ins {
+  background-color: #DAEBFE;
+  text-decoration: none; }
+
+mark {
+  background-color: #FFF0A5; }
+
+.legal {
+  color: #757575;
+  font-size: .75rem;
+  line-height: 1.25rem; }
+
+blockquote {
+  border-left: #2774AE;
+  border-left-style: solid;
+  border-left-width: 8px;
+  padding: 0 0 5px 25px; }
+
+cite {
+  color: #525252;
+  display: block;
+  font-style: normal;
+  margin-top: 26px; }
 
