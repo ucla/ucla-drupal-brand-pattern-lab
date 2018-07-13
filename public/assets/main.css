@@ -599,24 +599,46 @@ a:active, a:hover {
 
 a:active {
   background-color: #003B5C; }
+  a:active[target="_blank"]:after {
+    background-image: url("/images/icons/icon-externallink-hover-active-focus.svg"); }
 
 a:hover {
   background-color: #0052E0; }
+  a:hover[target="_blank"]:after {
+    background-image: url("/images/icons/icon-externallink-hover-active-focus.svg"); }
 
 a:visited {
   color: #5223B0; }
+  a:visited:hover {
+    color: #FFFFFF; }
+  a:visited[target="_blank"]:after {
+    background-image: url("/images/icons/icon-externallink-visited.svg"); }
 
 a.light:link, a.light:visited {
   color: #FFFFFF; }
+  a.light:link[target="_blank"]:after, a.light:visited[target="_blank"]:after {
+    background-image: url("/images/icons/icon-externallink-hover-active-focus.svg"); }
 
 a.light:active, a.light:hover {
   background-color: #FFFFFF; }
 
 a.light:active {
   color: #003B5C; }
+  a.light:active[target="_blank"]:after {
+    background-image: url("/images/icons/icon-externallink-active-dark.svg"); }
 
 a.light:hover {
   color: #0052E0; }
+  a.light:hover[target="_blank"]:after {
+    background-image: url("/images/icons/icon-externallink-hover-dark.svg"); }
+
+a[target="_blank"]:after {
+  background-image: url("/images/icons/icon-externallink-default.svg");
+  background-size: 24px 24px;
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  content: ""; }
 
 code {
   font-family: Courier, monospace;

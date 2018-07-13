@@ -8,26 +8,56 @@ a {
   }
   &:active {
     background-color: $active-state;
+    &[target="_blank"]:after {
+      background-image: url('/images/icons/icon-externallink-hover-active-focus.svg');
+    }
   }
   &:hover {
     background-color: $hover-state;
+    &[target="_blank"]:after {
+      background-image: url('/images/icons/icon-externallink-hover-active-focus.svg');
+    }
   }
   &:visited {
     color: $visited-state;
+    &:hover {
+      color: $white;
+    }
+    &[target="_blank"]:after {
+      background-image: url('/images/icons/icon-externallink-visited.svg');
+    }
   }
   &.light {
     &:link, &:visited {
       color: $white;
+      &[target="_blank"]:after {
+        background-image: url('/images/icons/icon-externallink-hover-active-focus.svg');
+      }
     }
     &:active, &:hover {
       background-color: $white;
     }
     &:active {
       color: $darkest-blue;
+      &[target="_blank"]:after {
+        background-image: url('/images/icons/icon-externallink-active-dark.svg');
+      }
     }
     &:hover {
       color: $hover-state;
+      &[target="_blank"]:after {
+        background-image: url('/images/icons/icon-externallink-hover-dark.svg');
+      }
     }
+  }
+  &[target="_blank"]:after {
+    //content: url('/images/icons/icon-externallink-default.svg'); 
+    background-image: url('/images/icons/icon-externallink-default.svg');
+    background-size: 24px 24px;
+    display: inline-block;
+    width: 24px; 
+    height: 24px;
+    content:"";
   }
 }
 
