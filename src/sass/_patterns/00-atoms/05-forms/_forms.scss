@@ -2,25 +2,25 @@ input {
 	display: block;
 	border-radius: 0.25em;
 	padding: 0.5em 3em 0.5em 1em;
-	font-family: $font;
+	font-family: Arial, Helvetica, sans-serif;
 	margin-top: 0.75em;
 	margin-bottom: 1em;
 	line-height: 1.5em;
 	width: 33.5em;
 	height: 2.5em;
 	font-size: 1em;
-	border: 1px solid $gray;
+	border: 1px solid #757575;
 	label {
 		display: block;
 		margin-bottom: 1.25em;
-		font-family: $font;
+		font-family: Arial, Helvetica, sans-serif;
 		line-height: 1.5em;
 		.error {
-			color:$gray-dark;
+			color:#000000;
 		}
 	}
 	.error {
-		border: 1px solid $error;
+		border: 1px solid #D60000;
 	}
 	&:focus {
 		outline: 1px dashed #005EEB;
@@ -42,7 +42,7 @@ input {
 	position: relative;
 	margin-bottom: 1em;
 	input {
-		border: 1px solid $error;
+		border: 1px solid #D60000;
 	}
 	span {
 		top: 0em;
@@ -70,17 +70,17 @@ textarea {
 	display: block;
 	border-radius: 0.25em;
 	padding: 0.5em 1em;
-	font-family: $font;
+	font-family: Arial, Helvetica, sans-serif;
 	margin-top: 0.75em;
 	margin-bottom: 1em;
 	line-height: 1.5em;
 	width: 33.5em;
 	font-size: 1em;
-	border: 1px solid $gray;
+	border: 1px solid #757575;
 	label {
 		display: block;
 		margin-bottom: 1.25em;
-		font-family: $font;
+		font-family: Arial, Helvetica, sans-serif;
 		line-height: 1.5em;
 	}
 	&:focus {
@@ -95,10 +95,10 @@ legend {
 	padding: 0 0.25em;
 }
 
-.legal {
+.legal-copy {
 	margin-top: 0.75em;
 	span {
-		color: $gray;
+		color: #757575;
 		margin-bottom: 0.75em;
 		line-height: 1.250em;
 		font-size: 0.813em;
@@ -114,7 +114,7 @@ legend {
 *************/
 
 select {
-	border: 1px solid $gray;
+	border: 1px solid #757575;
 	border-radius: 0.25em;
 	width: 100%;
 	height: 2.5em;
@@ -193,7 +193,7 @@ select::-ms-expand {
 	height: 1.5em;
 	width: 1.5em;
 	background-color: transparent;
-	border:1px solid $gray;
+	border:1px solid #757575;
 	border-radius: 0.25em;
 }
 
@@ -270,7 +270,7 @@ select::-ms-expand {
 	width: 1.5em;
 	background-color: white;
 	border-radius: 50%;
-	border:1px solid $gray;
+	border:1px solid #757575;
 }
 
 /* On mouse-over, add a blue background color */
@@ -327,7 +327,6 @@ fieldset grid
 
 fieldset.grid {
 	grid-template-columns: 1fr;
-	grid-template-rows: repeat(12, 1fr);
 	grid-template-rows: auto;
 	height: auto;
 	background: none;
