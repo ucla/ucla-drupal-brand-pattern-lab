@@ -45,6 +45,66 @@ header, footer, nav, section, article, hgroup, figure {
  * Begin pattern includes
  * See `webpack.common.js` for aliasing
  */
+.ucla-blue {
+  background: #2774AE; }
+
+.ucla-gold {
+  background: #FFD100; }
+
+.white {
+  background: #FFFFFF; }
+
+.lightest-blue {
+  background: #DAEBFE; }
+
+.lighter-blue {
+  background: #8BB8E8; }
+
+.darker-blue {
+  background: #005587; }
+
+.darkest-blue {
+  background: #003B5C; }
+
+.lightest-gold {
+  background: #FFF0A5; }
+
+.lighter-gold {
+  background: #FFDF42; }
+
+.darker-gold {
+  background: #FFC72C; }
+
+.darkest-gold {
+  background: #FFB81C; }
+
+.light-grey {
+  background: #EBEBEB; }
+
+.dark-grey {
+  background: #262626; }
+
+.lighter-grey {
+  background: #454545; }
+
+.default-state {
+  background: #0B6EA6; }
+
+.hover-state {
+  background: #0052E0; }
+
+.active-state {
+  background: #003B5C; }
+
+.focus-state {
+  background: #0052E0; }
+
+.disabled-state {
+  background: #5E5E5E; }
+
+.visited-state {
+  background: #5223B0; }
+
 @media (min-width: 576px) {
   .grid {
     margin: 0 18px; } }
@@ -344,8 +404,8 @@ table {
   border-bottom: 2px solid #005587;
   background-color: #FFFFFF;
   text-align: left;
-  font-size: 16px;
-  line-height: 24px; }
+  font-size: 1rem;
+  line-height: 1.5rem; }
 
 .table td {
   border-bottom: 1px solid #757575; }
@@ -410,8 +470,8 @@ table {
 caption {
   margin: 16px;
   text-align: left;
-  font-size: 16px;
-  line-height: 24px;
+  font-size: 1rem;
+  line-height: 1.5rem;
   font-weight: bold; }
 
 @media (max-width: 575.98px) {
@@ -462,66 +522,6 @@ caption {
   -ms-overflow-style: -ms-autohiding-scrollbar; }
   .table-responsive > .table-bordered {
     border: 0; }
-
-.ucla-blue {
-  background: #2774AE; }
-
-.ucla-gold {
-  background: #FFD100; }
-
-.white {
-  background: #FFFFFF; }
-
-.lightest-blue {
-  background: #DAEBFE; }
-
-.lighter-blue {
-  background: #8BB8E8; }
-
-.darker-blue {
-  background: #005587; }
-
-.darkest-blue {
-  background: #003B5C; }
-
-.lightest-gold {
-  background: #FFF0A5; }
-
-.lighter-gold {
-  background: #FFDF42; }
-
-.darker-gold {
-  background: #FFC72C; }
-
-.darkest-gold {
-  background: #FFB81C; }
-
-.light-grey {
-  background: #EBEBEB; }
-
-.dark-grey {
-  background: #262626; }
-
-.lighter-grey {
-  background: #454545; }
-
-.default-state {
-  background: #0B6EA6; }
-
-.hover-state {
-  background: #0052E0; }
-
-.active-state {
-  background: #003B5C; }
-
-.focus-state {
-  background: #0052E0; }
-
-.disabled-state {
-  background: #5E5E5E; }
-
-.visited-state {
-  background: #5223B0; }
 
 .gradient, .full-gradient, .dark-gradient, .medium-gradient, .light-gradient {
   height: 80px;
