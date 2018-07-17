@@ -295,8 +295,8 @@ select::-ms-expand {
 /* Show the indicator (dot/circle) when checked */
 .radio-button input:checked ~ .radio-checkmark:after {
 	display: block;
-	top: 0.175em;
-	left: 0.169em;
+	top: 0.165em;
+	left: 0.160em;
 }
 
 /* Style the indicator (dot/circle) */
