@@ -1,25 +1,19 @@
 <form action="#">
     <fieldset class="options grid">
         <legend>Radio</legend>
-        <ul>
-            <li class="radio-button">
-				<label class="radio-button">Choice 1
-				<input name="radio" type="radio" checked="checked">
-				<span class="radio-checkmark"></span>
-				</label>
+        <ul class="custom-radio">
+			<li class="radio-button-container">
+				<input type="radio" id="choice1" name="choices" value="1" checked>
+				<label for="choice1"><span></span>Choice 1</label>
 			</li>
-            <li class="radio-button">
-				<label class="radio-button">Choice 2
-				<input name="radio" type="radio">
-				<span class="radio-checkmark"></span>
-				</label>			
+			<li class="radio-button-container">
+				<input type="radio" id="choice2" name="choices" value="2">
+				<label for="choice2"><span></span>Choice 2</label>
 			</li>
-            <li class="radio-button">
-				<label class="radio-button">Choice 3
-				<input name="radio" type="radio">
-				<span class="radio-checkmark"></span>
-				</label>			
+			<li class="radio-button-container">
+				<input type="radio" id="choice3" name="choices" value="3">
+				<label for="choice3"><span></span>Choice 3</label>
 			</li>
-        </ul>
+		</ul>
     </fieldset>
 </form>
