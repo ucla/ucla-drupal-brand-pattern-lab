@@ -10,3 +10,94 @@ cite {
   font-style: normal;
   margin-top: 26px;
 }
+
+
+.list {
+	ul {
+		position: relative;
+		list-style-type: none;
+		padding: 0;
+		margin-top: 1rem;
+		margin-bottom: 1rem;
+		margin-left: 2.15rem;
+		li {
+			padding-left: 0rem; 
+			text-indent: 0;
+			margin: 0.5rem 0;
+			line-height: 1.5rem;
+			font-size: 1rem;
+			ul {
+				padding-left: 1rem;
+				margin-top: 0.5rem;
+				margin-bottom: 0.5rem;
+				li {
+					margin-top: 0rem;
+				}
+			}
+			&:before {
+				margin: 1rem 0 1rem -1.90rem;
+				content: "\25AA";
+				font-family: $font;
+				color: #2774AE;
+				padding-right: 1.50em;
+				
+			}
+		}
+	}
+	
+	ol {
+		padding-left: 0rem;
+		counter-reset: item;
+		margin-left: 2.15rem;
+		li {
+			display: block;
+			padding-left: 0;
+			margin: 0.5rem 0;
+			line-height: 1.5rem;
+			ol {
+				padding-left: 0rem;
+				counter-reset: item;
+				li {
+					display: block;
+					padding-left: 0;
+					margin-left: 1rem;
+				&:before {
+					content: counter(item) ".";
+					counter-increment: item;
+					color: #2774AE;
+					padding-right: 1.125em;
+					}
+				}
+			}
+		&:before {
+				content: counter(item) ".";
+				counter-increment: item;
+				color: #2774AE;
+				padding-right: 1.375em;
+				margin: 0 0 0 -2.15rem;
+			}
+		}
+	}
+}
+
+dl {
+	
+}
+dt {
+	float: left;
+	clear: left;
+	text-align: left;
+	font-weight: bold;
+	width: 15em;
+	line-height: 1.5em;	
+	margin-right: 2em;
+
+}
+dd {
+	margin: 0;
+	padding: 0 0 0.5em 0;
+	line-height: 1.5em;
+	margin: 0 0 0 16.95rem;
+}
+
+
