@@ -23,13 +23,34 @@ $lighter-grey: #454545;
 $medium-grey: #424242;
 $medium-grey2: #525252;
 
-// BUTTON / LINK STATE COLORS
+// Interactive COLORS
 $default-state: #0B6EA6;
 $hover-state: #0052E0;
 $active-state: #003B5C;
 $focus-state: #0052E0;
 $disabled-state: #5E5E5E;
 $visited-state: #5223B0;
+
+$default-state-dark:#FFD100;
+$hover-state-dark: #FFE500;
+$active-state-dark: #FFBF0F;
+$focus-state-dark: #FFE500;
+$disabled-state-dark: #EBEBEB;
+$visited-state-dark: #CFC3F3;
+
+// DENOTIVE COLORS
+$error-red: #D60000;
+$success-green: #007339;
+$warning-orange: #F57F17;
+$primary-alert-blue: #8BB8E8;
+$secondary-alert-grey: #979797;
+
+$error-red-light: #F7CCCC;
+$success-green-light: #CCE3D7;
+$warning-orange-light: #FDE5D1;
+$primary-alert-blue-light: #E8F1FA;
+$secondary-alert-grey-light: #EAEAEA;
+
 
 $black: #000000;
 
@@ -111,4 +132,68 @@ $black: #000000;
 
 .visited-state {
 	background: $visited-state;
+}
+
+.default-state-dark {
+	background: $default-state-dark;
+}
+
+.hover-state-dark {
+	background: $hover-state-dark;
+}
+
+.active-state-dark {
+	background: $active-state-dark;
+}
+
+.focus-state-dark {
+	background: $focus-state-dark;
+}
+
+.disabled-state-dark {
+	background: $disabled-state-dark;
+}
+
+.visited-state-dark {
+	background: $visited-state-dark;
+}
+
+.error-red {
+	background: $error-red;
+}
+
+.success-green {
+	background: $success-green;
+}
+
+.warning-orange {
+	background: $warning-orange;
+}
+
+.primary-alert-blue {
+	background: $primary-alert-blue;
+}
+
+.secondary-alert-grey {
+	background: $secondary-alert-grey;
+}
+
+.error-red-light {
+	background: $error-red-light;
+}
+
+.success-green-light {
+	background: $success-green-light;
+}
+
+.warning-orange-light {
+	background: $warning-orange-light;
+}
+
+.primary-alert-blue-light {
+	background: $primary-alert-blue-light;
+}
+
+.secondary-alert-grey-light {
+	background: $secondary-alert-grey-light;
 }
