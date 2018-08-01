@@ -9,13 +9,13 @@ a {
   &:active {
     background-color: $active-state;
     &[target="_blank"]:after {
-      background-image: url('/images/icons/icon-externallink-hover-active-focus.svg');
+      content: "\29C9";
     }
   }
   &:hover {
     background-color: $hover-state;
     &[target="_blank"]:after {
-      background-image: url('/images/icons/icon-externallink-hover-active-focus.svg');
+      content: "\29C9";
     }
   }
   &:visited {
@@ -24,14 +24,14 @@ a {
       color: $white;
     }
     &[target="_blank"]:after {
-      background-image: url('/images/icons/icon-externallink-visited.svg');
+      content: "\29C9";
     }
   }
   &.light {
     &:link, &:visited {
       color: $white;
       &[target="_blank"]:after {
-        background-image: url('/images/icons/icon-externallink-hover-active-focus.svg');
+        content: "\29C9";
       }
     }
     &:active, &:hover {
@@ -40,25 +40,23 @@ a {
     &:active {
       color: $darkest-blue;
       &[target="_blank"]:after {
-        background-image: url('/images/icons/icon-externallink-active-dark.svg');
+        content: "\29C9";
       }
     }
     &:hover {
       color: $hover-state;
       &[target="_blank"]:after {
-        background-image: url('/images/icons/icon-externallink-hover-dark.svg');
+        content: "\29C9'";
       }
     }
   }
   &[target="_blank"]:after {
-    //content: url('/images/icons/icon-externallink-default.svg'); 
-    background-image: url('/images/icons/icon-externallink-default.svg');
-    background-size: 24px 24px;
-    display: inline-block;
-    width: 24px; 
-    height: 24px;
-    content:"";
+    content: "\29C9";
   }
+}
+
+a::after{
+  content: " \2750";
 }
 
 code {
